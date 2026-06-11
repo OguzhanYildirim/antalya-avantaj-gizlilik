@@ -1,0 +1,1 @@
+# antalya-avantaj-gizlilik
