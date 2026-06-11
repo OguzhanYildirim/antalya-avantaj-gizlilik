@@ -1,223 +1,556 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Türkiye Kamusen Antalya Avantaj — Gizlilik Politikası / Privacy Policy</title>
-<style>
-  :root{
-    --sea:#0e7c86;          /* Akdeniz teal */
-    --sea-deep:#0a5b63;
-    --sand:#fbf9f4;         /* sıcak kırık beyaz */
-    --ink:#1f2a2e;          /* koyu arduvaz */
-    --muted:#5d6b70;
-    --line:#e4ded2;
-    --hl:#fff3c4;           /* placeholder vurgu */
-    --maxw:720px;
-  }
-  *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  body{
-    margin:0;
-    background:var(--sand);
-    color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.65;
-    font-size:17px;
-  }
-  header{
-    background:var(--sea);
-    color:#fff;
-    padding:34px 20px 28px;
-  }
-  .wrap{max-width:var(--maxw);margin:0 auto;}
-  header h1{
-    margin:0 0 6px;
-    font-size:1.55rem;
-    letter-spacing:.2px;
-  }
-  header .sub{margin:0;opacity:.9;font-size:.95rem;}
-  .langbar{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:14px 20px 0;
-    display:flex;gap:10px;
-  }
-  .langbar a{
-    text-decoration:none;
-    font-size:.85rem;
-    font-weight:600;
-    color:var(--sea-deep);
-    border:1px solid var(--line);
-    background:#fff;
-    border-radius:999px;
-    padding:6px 14px;
-  }
-  .langbar a:focus-visible{outline:3px solid var(--sea);outline-offset:2px;}
-  main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 56px;}
-  section.policy{padding-top:22px;}
-  h2{
-    font-size:1.25rem;
-    margin:40px 0 4px;
-    padding-top:10px;
-    border-top:2px solid var(--sea);
-    display:inline-block;
-  }
-  h3{font-size:1.02rem;margin:26px 0 6px;color:var(--sea-deep);}
-  p,li{color:var(--ink);}
-  .meta{color:var(--muted);font-size:.9rem;margin-top:4px;}
-  ul{padding-left:1.15rem;}
-  li{margin:6px 0;}
-  a{color:var(--sea-deep);}
-  .ph{
-    background:var(--hl);
-    padding:1px 6px;
-    border-radius:4px;
-    font-weight:600;
-    white-space:nowrap;
-  }
-  .divider{height:1px;background:var(--line);margin:48px 0;}
-  footer{
-    max-width:var(--maxw);margin:0 auto;padding:0 20px 40px;
-    color:var(--muted);font-size:.85rem;
-  }
-  @media (max-width:480px){
-    body{font-size:16px;}
-    header h1{font-size:1.3rem;}
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Gizlilik Politikası | Antalya Avantaj</title>
+
+  <meta
+    name="description"
+    content="Antalya Avantaj mobil uygulaması gizlilik politikası."
+  />
+
+  <style>
+    :root {
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --background: #ffffff;
+      --heading: #111827;
+      --link: #2563eb;
+      --max-width: 920px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    .wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .topbar {
+      margin-bottom: 48px;
+    }
+
+    .brand {
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      line-height: 1.2;
+      color: var(--heading);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .updated {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .intro {
+      margin-top: 40px;
+      margin-bottom: 52px;
+      color: var(--text);
+    }
+
+    section {
+      padding: 30px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    section:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      line-height: 1.35;
+      color: var(--heading);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin-top: 28px;
+      margin-bottom: 12px;
+      font-size: 18px;
+      color: var(--heading);
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    ul {
+      margin: 0 0 18px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .contact {
+      margin-top: 16px;
+      padding-left: 18px;
+      border-left: 3px solid var(--border);
+    }
+
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .lang-divider {
+      margin: 70px 0 10px;
+      border-top: 1px solid var(--border);
+      padding-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .wrapper {
+        padding: 36px 20px 60px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      body {
+        font-size: 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="wrap">
-    <h1>Antalya Avantaj</h1>
-    <p class="sub">Gizlilik Politikası · Privacy Policy</p>
+  <div class="wrapper">
+
+    <div class="topbar">
+      <div class="brand">
+        Antalya Avantaj
+      </div>
+
+      <h1>
+        Gizlilik Politikası
+      </h1>
+
+      <div class="updated">
+        Son Güncelleme: 12 Haziran 2026
+      </div>
+    </div>
+
+    <div class="intro">
+      <p>
+        Bu Gizlilik Politikası, Antalya Avantaj mobil uygulaması kapsamında
+        kişisel verilerin nasıl işlendiği, saklandığı ve korunduğu hakkında
+        kullanıcıları bilgilendirmek amacıyla hazırlanmıştır.
+      </p>
+
+      <p>
+        Antalya Avantaj uygulamasını kullanarak bu politikada belirtilen
+        uygulamaları kabul etmiş sayılırsınız.
+      </p>
+    </div>
+
+    <section>
+      <h2>1. Veri Sorumlusu</h2>
+
+      <p>
+        6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) kapsamında veri sorumlusu:
+      </p>
+
+      <div class="contact">
+        <strong>NAVIRID TEKNOLOJİ</strong><br />
+        E-posta:
+        <a href="mailto:info@navirid.com">
+          info@navirid.com
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Toplanan Veriler</h2>
+
+      <p>
+        Uygulama yalnızca hizmetin çalışması için gerekli minimum verileri işler.
+      </p>
+
+      <ul>
+        <li>Cihaz bildirim tokenı</li>
+        <li>Yönetici giriş e-posta bilgileri</li>
+        <li>Teknik hata kayıtları (crash logs)</li>
+        <li>Güvenlik ve performans logları</li>
+        <li>Uygulama sürüm bilgileri</li>
+        <li>IP adresi ve temel cihaz metadata bilgileri</li>
+      </ul>
+
+      <p>
+        Antalya Avantaj uygulaması:
+      </p>
+
+      <ul>
+        <li>Reklam kimliği toplamaz</li>
+        <li>Konum takibi yapmaz</li>
+        <li>Kişi rehberi erişimi istemez</li>
+        <li>Kamera veya mikrofon kaydı toplamaz</li>
+        <li>Kullanıcı davranış analitiği yapmaz</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Kişisel Verilerin İşlenme Amaçları</h2>
+
+      <p>
+        Kişisel veriler aşağıdaki amaçlarla işlenebilir:
+      </p>
+
+      <ul>
+        <li>Uygulama hizmetlerinin sunulabilmesi</li>
+        <li>Bildirim gönderimi</li>
+        <li>Sistem güvenliğinin sağlanması</li>
+        <li>Yetkisiz erişimlerin önlenmesi</li>
+        <li>Teknik hata tespiti ve performans iyileştirmesi</li>
+        <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Veri İşlemenin Hukuki Sebepleri</h2>
+
+      <p>
+        Veriler aşağıdaki hukuki sebeplere dayanılarak işlenmektedir:
+      </p>
+
+      <ul>
+        <li>Sözleşmenin kurulması ve ifası</li>
+        <li>Veri sorumlusunun meşru menfaatleri</li>
+        <li>Açık rıza gerektiren durumlar</li>
+        <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Üçüncü Taraf Hizmetler</h2>
+
+      <p>
+        Uygulama aşağıdaki altyapı servislerinden faydalanabilir:
+      </p>
+
+      <ul>
+        <li>Supabase</li>
+        <li>Google Firebase</li>
+      </ul>
+
+      <p>
+        Bu servis sağlayıcılar yalnızca teknik altyapının çalışabilmesi amacıyla
+        sınırlı veri işleyebilir.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Yurt Dışına Veri Aktarımı</h2>
+
+      <p>
+        Kullanılan altyapı servislerinin sunucuları yurt dışında bulunabileceğinden,
+        bazı veriler Türkiye dışındaki sunucularda işlenebilir veya saklanabilir.
+      </p>
+
+      <p>
+        Bu aktarım yalnızca:
+      </p>
+
+      <ul>
+        <li>Hizmetin çalışabilmesi</li>
+        <li>Bildirim gönderimi</li>
+        <li>Altyapı sürekliliği</li>
+        <li>Sistem güvenliği</li>
+      </ul>
+
+      <p>
+        amaçlarıyla sınırlıdır.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Yerel Veri Saklama</h2>
+
+      <p>
+        Uygulama bazı verileri cihaz üzerinde yerel olarak saklayabilir.
+      </p>
+
+      <p>
+        Yerel depolama için SQLite ve Drift teknolojileri kullanılabilir.
+      </p>
+
+      <p>
+        Yerel veriler cihaz dışına aktarılmaz ve yalnızca performans ile
+        çevrimdışı kullanım amacıyla tutulur.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Veri Güvenliği</h2>
+
+      <p>
+        Kişisel verilerin korunması amacıyla makul teknik ve idari güvenlik önlemleri uygulanmaktadır.
+      </p>
+
+      <ul>
+        <li>HTTPS / TLS şifreleme</li>
+        <li>Erişim kontrol mekanizmaları</li>
+        <li>Row Level Security (RLS)</li>
+        <li>Yetkilendirme sistemleri</li>
+        <li>Güvenli kimlik doğrulama süreçleri</li>
+      </ul>
+
+      <p>
+        Yönetici giriş şifreleri doğrudan görüntülenebilir şekilde saklanmaz.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Veri Saklama Süresi</h2>
+
+      <p>
+        Veriler yalnızca gerekli olduğu süre boyunca saklanır.
+      </p>
+
+      <ul>
+        <li>Bildirim tokenları uygulama kaldırılana kadar</li>
+        <li>Teknik loglar sınırlı süre boyunca</li>
+        <li>Yönetici erişim kayıtları gerekli süre boyunca</li>
+      </ul>
+
+      <p>
+        Süre sonunda veriler silinir, anonimleştirilir veya güvenli şekilde imha edilir.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Kullanıcı Hakları</h2>
+
+      <p>
+        KVKK kapsamında kullanıcılar:
+      </p>
+
+      <ul>
+        <li>Kişisel verilerinin işlenip işlenmediğini öğrenme</li>
+        <li>İşlenen verilere ilişkin bilgi talep etme</li>
+        <li>Verilerin düzeltilmesini isteme</li>
+        <li>Verilerin silinmesini talep etme</li>
+        <li>Veri işlemeye itiraz etme</li>
+      </ul>
+
+      <div class="contact">
+        İletişim:
+        <a href="mailto:info@navirid.com">
+          info@navirid.com
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>11. Çocukların Gizliliği</h2>
+
+      <p>
+        Uygulama doğrudan çocuklara yönelik değildir.
+        13 yaş altındaki çocuklardan bilerek veri toplanmaz.
+      </p>
+    </section>
+
+    <section>
+      <h2>12. Harici Bağlantılar</h2>
+
+      <p>
+        Uygulama üçüncü taraf bağlantılar içerebilir.
+        Bu sitelerin gizlilik uygulamalarından Antalya Avantaj sorumlu değildir.
+      </p>
+    </section>
+
+    <section>
+      <h2>13. Politika Güncellemeleri</h2>
+
+      <p>
+        Bu politika gerektiğinde güncellenebilir.
+        Güncel sürüm bu sayfa üzerinden yayınlanır.
+      </p>
+    </section>
+
+    <section>
+      <h2>14. GitHub Pages ve Teknik Loglar</h2>
+
+      <p>
+        Bu gizlilik politikası mobil uygulama için geçerlidir.
+      </p>
+
+      <p>
+        Politikanın yayınlandığı GitHub Pages altyapısı kendi teknik erişim loglarını bağımsız olarak işleyebilir.
+      </p>
+    </section>
+
+    <div class="lang-divider">
+
+      <h1 style="font-size: 34px;">
+        Privacy Policy
+      </h1>
+
+      <div class="updated">
+        Last Updated: June 12, 2026
+      </div>
+
+    </div>
+
+    <section>
+      <h2>1. Data Controller</h2>
+
+      <p>
+        Under applicable privacy laws, the data controller is:
+      </p>
+
+      <div class="contact">
+        <strong>NAVIRID TEKNOLOJI</strong><br />
+        Email:
+        <a href="mailto:info@navirid.com">
+          info@navirid.com
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Data We Collect</h2>
+
+      <ul>
+        <li>Notification tokens</li>
+        <li>Administrator email information</li>
+        <li>Crash logs</li>
+        <li>Security and performance logs</li>
+        <li>Application version information</li>
+        <li>Basic IP and device metadata</li>
+      </ul>
+
+      <p>
+        The application does not collect advertising identifiers,
+        location tracking data, contact lists, microphone recordings,
+        or behavioral analytics.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Purpose of Processing</h2>
+
+      <ul>
+        <li>Providing application services</li>
+        <li>Sending notifications</li>
+        <li>Maintaining system security</li>
+        <li>Preventing unauthorized access</li>
+        <li>Technical troubleshooting and optimization</li>
+        <li>Compliance with legal obligations</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Third-Party Services</h2>
+
+      <ul>
+        <li>Supabase</li>
+        <li>Google Firebase</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. International Data Transfers</h2>
+
+      <p>
+        Some infrastructure providers may process or store data on servers located outside Türkiye.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Security Measures</h2>
+
+      <ul>
+        <li>HTTPS/TLS encryption</li>
+        <li>Access control systems</li>
+        <li>Row Level Security (RLS)</li>
+        <li>Authentication mechanisms</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. User Rights</h2>
+
+      <p>
+        Users may request access, correction, deletion, or information regarding their personal data.
+      </p>
+
+      <div class="contact">
+        Contact:
+        <a href="mailto:info@navirid.com">
+          info@navirid.com
+        </a>
+      </div>
+    </section>
+
+    <div class="footer">
+      © 2026 NAVIRID TEKNOLOJİ — Antalya Avantaj
+    </div>
+
   </div>
-</header>
-
-<nav class="langbar" aria-label="Dil / Language">
-  <a href="#tr">Türkçe</a>
-  <a href="#en">English</a>
-</nav>
-
-<main>
-
-<!-- ============ TÜRKÇE ============ -->
-<section class="policy" id="tr" lang="tr">
-  <h2>Gizlilik Politikası</h2>
-  <p class="meta">Son güncelleme: 12 Haziran 2026</p>
-
-  <h3>1. Genel Bakış ve Veri Sorumlusu</h3>
-  <p>Bu gizlilik politikası, <span class="ph">NAVİRİD TEKNOLOJİ AŞ</span> tarafından sunulan <strong>Antalya Avantaj</strong> mobil uygulaması için geçerlidir. Uygulama, kuruma bağlı kişilere yönelik indirim ve kampanya anlaşmalarını listeleyen, içerik odaklı bir uygulamadır. Son kullanıcılar yalnızca içeriği görüntüler; hesap oluşturmaz ve veri girişi yapmaz.</p>
-
-  <h3>2. Topladığımız Veriler ve Amaçları</h3>
-  <ul>
-    <li><strong>Bildirim (push) token'ı — Firebase Cloud Messaging:</strong> Kampanya ve duyuru bildirimleri gönderebilmek için kullanılır. Konu (topic) tabanlı yayın yöntemini kullandığımızdan token bizim sunucularımızda saklanmaz; token, bildirimi cihazınıza iletmek amacıyla Google Firebase tarafından işlenir.</li>
-    <li><strong>Yönetici hesabı bilgileri (yalnızca kurum yöneticileri):</strong> E-posta ve şifre, yalnızca yönetim paneline güvenli giriş için işlenir. Son kullanıcılardan herhangi bir kimlik bilgisi alınmaz.</li>
-    <li><strong>Yönetici tarafından yüklenen görseller (image_picker):</strong> Galeri erişimi yalnızca yönetici panelinde, mağaza/kampanya görseli yüklemek için istenir. Görsel seçimi yalnızca yöneticiler tarafından yapılır ve içerik olarak yayımlanır.</li>
-    <li><strong>Herkese açık içerik:</strong> İndirim/kampanya, kategori ve kurum ayarları gibi içerikler kişisel veri niteliği taşımaz; uygulamada gösterilmek üzere veritabanında tutulur.</li>
-  </ul>
-
-  <h3>3. Cihazınızda Saklanan Veriler</h3>
-  <p>Favorileriniz ve uygulama tercihleriniz yalnızca cihazınızdaki yerel SQLite (Drift) veritabanında saklanır. Bu veriler <strong>cihazdan dışarı gönderilmez</strong>, bizim veya üçüncü tarafların erişimine açılmaz ve uygulamayı kaldırdığınızda silinir.</p>
-
-  <h3>4. Reklam, Analitik ve Takip</h3>
-  <p>Uygulamada <strong>üçüncü taraf reklam, analitik veya takip (tracking) SDK'sı bulunmamaktadır.</strong> IDFA veya reklam kimliği toplanmaz; çapraz uygulama veya çapraz site takibi yapılmaz.</p>
-
-  <h3>5. Üçüncü Taraflar ve Alt İşleyiciler</h3>
-  <p>Verileriniz hiçbir koşulda satılmaz veya pazarlama amacıyla paylaşılmaz. Hizmeti sağlamak için yalnızca aşağıdaki alt işleyiciler kullanılır:</p>
-  <ul>
-    <li><strong>Supabase</strong> — kimlik doğrulama, veritabanı ve dosya depolama hizmetleri (veri işleyen / alt işleyici).</li>
-    <li><strong>Google Firebase (Cloud Messaging)</strong> — bildirim teslimi için kullanılır ve bildirim token'ını işler (alt işleyici).</li>
-  </ul>
-
-  <h3>6. Saklama Süreleri</h3>
-  <ul>
-    <li><strong>Bildirim token'ı:</strong> Uygulama yüklü kaldığı ve bildirimleri açık tuttuğunuz sürece geçerlidir; Firebase tarafından yönetilir, uygulamayı kaldırdığınızda geçersiz olur.</li>
-    <li><strong>Yönetici hesabı:</strong> Hesap aktif olduğu sürece tutulur; talep üzerine veya hesap kapatıldığında silinir.</li>
-    <li><strong>Yönetici görselleri:</strong> İlgili yönetici silene kadar depolama alanında tutulur.</li>
-    <li><strong>Herkese açık içerik:</strong> Güncelliğini koruduğu sürece tutulur.</li>
-    <li><strong>Cihazdaki yerel veriler:</strong> Uygulamayı kaldırana kadar yalnızca cihazınızda kalır.</li>
-  </ul>
-
-  <h3>7. Çocuklara Yönelik Değildir</h3>
-  <p>Bu uygulama çocuklara yönelik değildir ve bilerek 13 yaşından küçük çocuklardan kişisel veri toplamaz. Bir çocuğa ait veri işlediğimizi fark edersek bunu sileriz.</p>
-
-  <h3>8. Haklarınız (KVKK ve GDPR)</h3>
-  <p>6698 sayılı KVKK'nın 11. maddesi ve GDPR kapsamında; verilerinize <strong>erişim</strong>, <strong>düzeltme</strong>, <strong>silme</strong>, işlenmesine <strong>itiraz</strong>, <strong>taşınabilirlik</strong> ve açık rızanızı <strong>geri çekme</strong> (bildirimleri kapatma) haklarına sahipsiniz. Bildirimleri dilediğiniz an cihazınızın ayarlarından kapatabilirsiniz. Taleplerinizi şu adrese iletebilirsiniz: <span class="ph">info@navirid.com</span></p>
-
-  <h3>9. Veri Güvenliği</h3>
-  <p>Sunucu tarafında veriye erişim, satır düzeyi güvenlik (Row Level Security) politikalarıyla sınırlandırılır. Son kullanıcı bağlantıları yalnızca okuma yetkisine sahiptir; veri ekleme ve silme işlemleri yalnızca yetkili yöneticilerle sınırlıdır.</p>
-
-  <h3>10. Politikadaki Değişiklikler</h3>
-  <p>Bu politikayı zaman zaman güncelleyebiliriz. Güncel sürüm her zaman bu sayfada yayımlanır ve yukarıdaki "Son güncelleme" tarihi buna göre değişir.</p>
-
-  <h3>11. İletişim</h3>
-  <p>Gizlilikle ilgili sorularınız ve veri talepleriniz için: <span class="ph">info@navirid.com</span></p>
-</section>
-
-<div class="divider"></div>
-
-<!-- ============ ENGLISH ============ -->
-<section class="policy" id="en" lang="en">
-  <h2>Privacy Policy</h2>
-  <p class="meta">Last updated: 12 June 2026</p>
-
-  <h3>1. Overview &amp; Data Controller</h3>
-  <p>This privacy policy applies to the <strong>Antalya Avantaj</strong> mobile application provided by <span class="ph">NAVİRİD TEKNOLOJİ AŞ</span>. The app is a content-focused application that lists discount and campaign agreements for members of the institution. End users only view content; they do not create accounts or submit data.</p>
-
-  <h3>2. Data We Collect and Why</h3>
-  <ul>
-    <li><strong>Push notification token — Firebase Cloud Messaging:</strong> Used to deliver campaign and announcement notifications. Because we use topic-based broadcasting, your token is not stored on our servers; the token is processed by Google Firebase solely to deliver notifications to your device.</li>
-    <li><strong>Administrator account data (institution admins only):</strong> Email and password are processed only to securely sign in to the management panel. No credentials are collected from end users.</li>
-    <li><strong>Images uploaded by administrators (image_picker):</strong> Gallery access is requested only within the admin panel to upload store/campaign images. Image selection is performed by administrators and the images are published as content.</li>
-    <li><strong>Publicly available content:</strong> Content such as discounts/campaigns, categories, and institution settings is not personal data; it is stored in the database to be displayed in the app.</li>
-  </ul>
-
-  <h3>3. Data Stored on Your Device</h3>
-  <p>Your favorites and app preferences are stored only in a local SQLite (Drift) database on your device. This data <strong>never leaves your device</strong>, is not accessible to us or any third party, and is removed when you uninstall the app.</p>
-
-  <h3>4. Advertising, Analytics &amp; Tracking</h3>
-  <p>The app contains <strong>no third-party advertising, analytics, or tracking SDKs.</strong> We do not collect the IDFA or any advertising identifier, and we perform no cross-app or cross-site tracking.</p>
-
-  <h3>5. Third Parties &amp; Sub-processors</h3>
-  <p>Your data is never sold or shared for marketing purposes. To operate the service we use only the following sub-processors:</p>
-  <ul>
-    <li><strong>Supabase</strong> — authentication, database, and file storage services (data processor / sub-processor).</li>
-    <li><strong>Google Firebase (Cloud Messaging)</strong> — used to deliver notifications and processes the notification token (sub-processor).</li>
-  </ul>
-
-  <h3>6. Retention Periods</h3>
-  <ul>
-    <li><strong>Notification token:</strong> Valid while the app is installed and notifications are enabled; managed by Firebase and invalidated when you uninstall the app.</li>
-    <li><strong>Administrator account:</strong> Retained while the account is active; deleted upon request or when the account is closed.</li>
-    <li><strong>Administrator images:</strong> Kept in storage until deleted by the relevant administrator.</li>
-    <li><strong>Public content:</strong> Retained while it remains current.</li>
-    <li><strong>Local on-device data:</strong> Remains only on your device until you uninstall the app.</li>
-  </ul>
-
-  <h3>7. Not Directed to Children</h3>
-  <p>This app is not directed to children and does not knowingly collect personal data from children under the age of 13. If we become aware that we have processed a child's data, we will delete it.</p>
-
-  <h3>8. Your Rights (KVKK &amp; GDPR)</h3>
-  <p>Under Article 11 of Turkey's KVKK and under the GDPR, you have the rights of <strong>access</strong>, <strong>rectification</strong>, <strong>erasure</strong>, <strong>objection</strong> to processing, <strong>data portability</strong>, and <strong>withdrawal of consent</strong> (turning off notifications). You can disable notifications at any time in your device settings. To exercise your rights, contact: <span class="ph">info@navirid.com</span></p>
-
-  <h3>9. Data Security</h3>
-  <p>Access to data on the server is restricted by Row Level Security policies. End-user connections have read-only access; insert and delete operations are limited to authorized administrators.</p>
-
-  <h3>10. Changes to This Policy</h3>
-  <p>We may update this policy from time to time. The current version is always published on this page, and the "Last updated" date above is revised accordingly.</p>
-
-  <h3>11. Contact</h3>
-  <p>For privacy questions and data requests: <span class="ph">info@navirid.com</span></p>
-</section>
-
-</main>
-
-<footer class="wrap">
-  Antalya Avantaj · <span lang="tr">Gizlilik Politikası</span> / <span lang="en">Privacy Policy</span>
-</footer>
 
 </body>
 </html>
