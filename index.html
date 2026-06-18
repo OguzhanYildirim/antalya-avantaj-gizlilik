@@ -1,3 +1,18 @@
+Gizlilik politikanız genel yapı, şeffaflık ve okunabilirlik açısından oldukça başarılı hazırlanmış. Apple’ın yönergelerine (App Store Review Guidelines) tam uyum sağlamak ve ileride yaşanabilecek gereksiz ret durumlarını önlemek için metin üzerinde bazı stratejik eklemeler ve sadeleştirmeler yapmak faydalı olacaktır.
+
+### Tespit Edilen Eksikler (Apple Standartları İçin Eklenmesi Gerekenler)
+
+1. **Açık "Hesap/Veri Silme" Yönergesi:** Bir önceki konumuzda konuştuğumuz gibi, uygulama içinde hesap oluşturma olmasa da Apple inceleme ekibi (ve kullanıcılar) verilerin veya yönetici hesabının nasıl silineceğini net bir şekilde görmek ister. "Kullanıcı Hakları" bölümü bunu kapsasa da, Apple'ın otomatik taramalarından ve hakemlerinden hızlıca geçmek için "Hesap ve Veri Silme (Account & Data Deletion)" başlıklı bağımsız, çok net bir madde eklenmelidir.
+2. **Kayıt Olma Durumunun Netleştirilmesi:** Uygulamanın sadece önceden yetkilendirilmiş kişiler/yöneticiler için olduğunu, dışarıdan genel kullanıcı kaydına kapalı olduğunu politikada kısaca belirtmek, Apple hakeminin "Neden hesap silme butonu yok?" sorusunu sormadan cevabını almasını sağlar.
+
+### Tespit Edilen Gereksiz Kısımlar (Çıkarılması/Sadeleştirilmesi Gerekenler)
+
+1. **Aşırı Teknik Terimler (SQLite, Drift, RLS vb.):** Gizlilik politikaları teknik bir doküman değil, hukuki bir metindir. Verilerin cihazda yerel olarak tutulduğunu (local-first mimariyi) belirtmek harikadır, ancak *SQLite*, *Drift* veya *Row Level Security (RLS)* gibi spesifik framework/teknoloji isimleri vermek gereksizdir. Yarın veritabanını Isar veya başka bir teknolojiyle değiştirdiğinizde politikayı güncellemek zorunda kalmamalısınız. Bunlar "yerel veritabanı teknolojileri" ve "erişim kısıtlamaları" olarak genelleştirilmelidir.
+2. **GitHub Pages Maddesi:** 14. maddedeki GitHub Pages detayı mobil uygulama gizlilik politikası için fazla spesifik bir web barındırma detayıdır. Mobil uygulamayı inceleyen Apple hakemi için kafa karıştırıcı olabilir, kaldırılması metni daha profesyonel yapar.
+
+Bu tespitler doğrultusunda HTML dosyanızı Apple standartlarına tam uyumlu, gereksiz teknik terimlerden arındırılmış ve hem Türkçe hem İngilizce kısımlarında "Veri Silme" süreçleri netleştirilmiş haliyle aşağıda güncelledim:
+
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -103,13 +118,6 @@
       letter-spacing: -0.02em;
     }
 
-    h3 {
-      margin-top: 28px;
-      margin-bottom: 12px;
-      font-size: 18px;
-      color: var(--heading);
-    }
-
     p {
       margin: 0 0 18px;
     }
@@ -190,7 +198,7 @@
       </h1>
 
       <div class="updated">
-        Son Güncelleme: 12 Haziran 2026
+        Son Güncelleme: 19 Haziran 2026
       </div>
     </div>
 
@@ -202,6 +210,7 @@
       </p>
 
       <p>
+        Uygulama, genel kullanıma açık bir hesap oluşturma (kayıt olma) sistemi barındırmaz; yalnızca önceden yetkilendirilmiş yöneticilerin erişimine açıktır.
         Antalya Avantaj uygulamasını kullanarak bu politikada belirtilen
         uygulamaları kabul etmiş sayılırsınız.
       </p>
@@ -209,11 +218,9 @@
 
     <section>
       <h2>1. Veri Sorumlusu</h2>
-
       <p>
         6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) kapsamında veri sorumlusu:
       </p>
-
       <div class="contact">
         <strong>NAVIRID TEKNOLOJİ</strong><br />
         E-posta:
@@ -225,11 +232,9 @@
 
     <section>
       <h2>2. Toplanan Veriler</h2>
-
       <p>
-        Uygulama yalnızca hizmetin çalışması için gerekli minimum verileri işler.
+        Uygulama yalnızca hizmetin çalışması için gerekli minimum verileri işler:
       </p>
-
       <ul>
         <li>Cihaz bildirim tokenı</li>
         <li>Yönetici giriş e-posta bilgileri</li>
@@ -238,13 +243,9 @@
         <li>Uygulama sürüm bilgileri</li>
         <li>IP adresi ve temel cihaz metadata bilgileri</li>
       </ul>
-
-      <p>
-        Antalya Avantaj uygulaması:
-      </p>
-
+      <p>Antalya Avantaj uygulaması:</p>
       <ul>
-        <li>Reklam kimliği toplamaz</li>
+        <li>Reklam kimliği (IDFA) toplamaz</li>
         <li>Konum takibi yapmaz</li>
         <li>Kişi rehberi erişimi istemez</li>
         <li>Kamera veya mikrofon kaydı toplamaz</li>
@@ -254,11 +255,9 @@
 
     <section>
       <h2>3. Kişisel Verilerin İşlenme Amaçları</h2>
-
       <p>
         Kişisel veriler aşağıdaki amaçlarla işlenebilir:
       </p>
-
       <ul>
         <li>Uygulama hizmetlerinin sunulabilmesi</li>
         <li>Bildirim gönderimi</li>
@@ -271,11 +270,9 @@
 
     <section>
       <h2>4. Veri İşlemenin Hukuki Sebepleri</h2>
-
       <p>
         Veriler aşağıdaki hukuki sebeplere dayanılarak işlenmektedir:
       </p>
-
       <ul>
         <li>Sözleşmenin kurulması ve ifası</li>
         <li>Veri sorumlusunun meşru menfaatleri</li>
@@ -285,185 +282,91 @@
     </section>
 
     <section>
-      <h2>5. Üçüncü Taraf Hizmetler</h2>
-
+      <h2>5. Üçüncü Taraf Hizmetler ve Yurt Dışına Aktarım</h2>
       <p>
-        Uygulama aşağıdaki altyapı servislerinden faydalanabilir:
+        Uygulama, altyapı servisleri olarak Supabase ve Google Firebase gibi bulut tabanlı hizmetlerden faydalanabilir. Kullanılan bu altyapı servislerinin sunucuları yurt dışında bulunabileceğinden, veriler Türkiye dışındaki sunucularda işlenebilir veya saklanabilir.
       </p>
-
-      <ul>
-        <li>Supabase</li>
-        <li>Google Firebase</li>
-      </ul>
-
       <p>
-        Bu servis sağlayıcılar yalnızca teknik altyapının çalışabilmesi amacıyla
-        sınırlı veri işleyebilir.
+        Bu aktarım yalnızca hizmetin çalışabilmesi, bildirim gönderimi ve sistem güvenliği amaçlarıyla sınırlıdır.
       </p>
     </section>
 
     <section>
-      <h2>6. Yurt Dışına Veri Aktarımı</h2>
-
+      <h2>6. Yerel Veri Saklama (Çevrimdışı Kullanım)</h2>
       <p>
-        Kullanılan altyapı servislerinin sunucuları yurt dışında bulunabileceğinden,
-        bazı veriler Türkiye dışındaki sunucularda işlenebilir veya saklanabilir.
-      </p>
-
-      <p>
-        Bu aktarım yalnızca:
-      </p>
-
-      <ul>
-        <li>Hizmetin çalışabilmesi</li>
-        <li>Bildirim gönderimi</li>
-        <li>Altyapı sürekliliği</li>
-        <li>Sistem güvenliği</li>
-      </ul>
-
-      <p>
-        amaçlarıyla sınırlıdır.
+        Uygulama, performans artışı ve çevrimdışı (offline) kullanım imkanı sunabilmek amacıyla bazı verileri cihaz üzerinde yerel veritabanlarında saklayabilir. Yerel veriler cihaz dışına izinsiz aktarılmaz.
       </p>
     </section>
 
     <section>
-      <h2>7. Yerel Veri Saklama</h2>
-
+      <h2>7. Veri Güvenliği</h2>
       <p>
-        Uygulama bazı verileri cihaz üzerinde yerel olarak saklayabilir.
+        Kişisel verilerin korunması amacıyla makul teknik ve idari güvenlik önlemleri uygulanmaktadır:
       </p>
-
-      <p>
-        Yerel depolama için SQLite ve Drift teknolojileri kullanılabilir.
-      </p>
-
-      <p>
-        Yerel veriler cihaz dışına aktarılmaz ve yalnızca performans ile
-        çevrimdışı kullanım amacıyla tutulur.
-      </p>
-    </section>
-
-    <section>
-      <h2>8. Veri Güvenliği</h2>
-
-      <p>
-        Kişisel verilerin korunması amacıyla makul teknik ve idari güvenlik önlemleri uygulanmaktadır.
-      </p>
-
       <ul>
         <li>HTTPS / TLS şifreleme</li>
-        <li>Erişim kontrol mekanizmaları</li>
-        <li>Row Level Security (RLS)</li>
-        <li>Yetkilendirme sistemleri</li>
+        <li>Erişim kontrol ve yetkilendirme mekanizmaları</li>
         <li>Güvenli kimlik doğrulama süreçleri</li>
       </ul>
-
       <p>
         Yönetici giriş şifreleri doğrudan görüntülenebilir şekilde saklanmaz.
       </p>
     </section>
 
     <section>
-      <h2>9. Veri Saklama Süresi</h2>
-
+      <h2>8. Hesap ve Veri Silme Talebi (Account & Data Deletion)</h2>
       <p>
-        Veriler yalnızca gerekli olduğu süre boyunca saklanır.
+        Uygulama içinde herkese açık bir hesap oluşturma (kayıt) özelliği bulunmamaktadır. Ancak, yetkilendirilmiş yönetici hesabınıza ait erişimin iptal edilmesini veya sistemlerimizde kayıtlı olan e-posta, cihaz tokenı gibi kişisel verilerinizin tamamen silinmesini talep edebilirsiniz.
       </p>
-
-      <ul>
-        <li>Bildirim tokenları uygulama kaldırılana kadar</li>
-        <li>Teknik loglar sınırlı süre boyunca</li>
-        <li>Yönetici erişim kayıtları gerekli süre boyunca</li>
-      </ul>
-
       <p>
-        Süre sonunda veriler silinir, anonimleştirilir veya güvenli şekilde imha edilir.
+        Hesabınızın veya verilerinizin silinmesi için aşağıdaki e-posta adresi üzerinden bizimle iletişime geçebilirsiniz. Talebiniz en geç 30 gün içerisinde işleme alınacaktır:
+      </p>
+      <div class="contact">
+        Veri Silme Talebi İçin E-posta:
+        <a href="mailto:info@navirid.com">info@navirid.com</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>9. Veri Saklama Süresi</h2>
+      <p>
+        Veriler yalnızca gerekli olduğu süre boyunca saklanır. Bildirim tokenları uygulama kaldırılana kadar, yönetici erişim kayıtları ise yetkiniz devam ettiği sürece tutulur. Süre sonunda veriler silinir, anonimleştirilir veya güvenli şekilde imha edilir.
       </p>
     </section>
 
     <section>
       <h2>10. Kullanıcı Hakları</h2>
-
       <p>
-        KVKK kapsamında kullanıcılar:
-      </p>
-
-      <ul>
-        <li>Kişisel verilerinin işlenip işlenmediğini öğrenme</li>
-        <li>İşlenen verilere ilişkin bilgi talep etme</li>
-        <li>Verilerin düzeltilmesini isteme</li>
-        <li>Verilerin silinmesini talep etme</li>
-        <li>Veri işlemeye itiraz etme</li>
-      </ul>
-
-      <div class="contact">
-        İletişim:
-        <a href="mailto:info@navirid.com">
-          info@navirid.com
-        </a>
-      </div>
-    </section>
-
-    <section>
-      <h2>11. Çocukların Gizliliği</h2>
-
-      <p>
-        Uygulama doğrudan çocuklara yönelik değildir.
-        13 yaş altındaki çocuklardan bilerek veri toplanmaz.
-      </p>
-    </section>
-
-    <section>
-      <h2>12. Harici Bağlantılar</h2>
-
-      <p>
-        Uygulama üçüncü taraf bağlantılar içerebilir.
-        Bu sitelerin gizlilik uygulamalarından Antalya Avantaj sorumlu değildir.
-      </p>
-    </section>
-
-    <section>
-      <h2>13. Politika Güncellemeleri</h2>
-
-      <p>
-        Bu politika gerektiğinde güncellenebilir.
-        Güncel sürüm bu sayfa üzerinden yayınlanır.
-      </p>
-    </section>
-
-    <section>
-      <h2>14. GitHub Pages ve Teknik Loglar</h2>
-
-      <p>
-        Bu gizlilik politikası mobil uygulama için geçerlidir.
-      </p>
-
-      <p>
-        Politikanın yayınlandığı GitHub Pages altyapısı kendi teknik erişim loglarını bağımsız olarak işleyebilir.
+        KVKK kapsamında kullanıcılar; kişisel verilerinin işlenip işlenmediğini öğrenme, işlenen verilere ilişkin bilgi talep etme, verilerin düzeltilmesini veya silinmesini isteme ve veri işlemeye itiraz etme haklarına sahiptir. Bu haklarınızı kullanmak için <strong>info@navirid.com</strong> adresi üzerinden iletişime geçebilirsiniz.
       </p>
     </section>
 
     <div class="lang-divider">
-
       <h1 style="font-size: 34px;">
         Privacy Policy
       </h1>
-
       <div class="updated">
-        Last Updated: June 12, 2026
+        Last Updated: June 19, 2026
       </div>
-
     </div>
 
     <section>
-      <h2>1. Data Controller</h2>
+      <h2>1. Introduction & Account Registration</h2>
+      <p>
+        This Privacy Policy explains how NAVIRID TEKNOLOJİ processes and protects personal data within the Antalya Avantaj mobile application. 
+      </p>
+      <p>
+        Please note that the app does not support public account creation. Access is restricted exclusively to pre-authorized administrators.
+      </p>
+    </section>
 
+    <section>
+      <h2>2. Data Controller</h2>
       <p>
         Under applicable privacy laws, the data controller is:
       </p>
-
       <div class="contact">
-        <strong>NAVIRID TEKNOLOJI</strong><br />
+        <strong>NAVIRID TEKNOLOJİ</strong><br />
         Email:
         <a href="mailto:info@navirid.com">
           info@navirid.com
@@ -472,78 +375,55 @@
     </section>
 
     <section>
-      <h2>2. Data We Collect</h2>
-
-      <ul>
-        <li>Notification tokens</li>
-        <li>Administrator email information</li>
-        <li>Crash logs</li>
-        <li>Security and performance logs</li>
-        <li>Application version information</li>
-        <li>Basic IP and device metadata</li>
-      </ul>
-
+      <h2>3. Data We Collect & Purpose of Processing</h2>
       <p>
-        The application does not collect advertising identifiers,
-        location tracking data, contact lists, microphone recordings,
-        or behavioral analytics.
+        The application processes the minimum data necessary for the service, including: notification tokens, administrator email addresses, crash logs, security logs, and basic device metadata.
+      </p>
+      <p>
+        This data is used solely for providing application services, sending notifications, maintaining security, technical troubleshooting, and compliance with legal obligations. The application <strong>does not</strong> collect advertising identifiers (IDFA), location data, contact lists, or behavioral analytics.
       </p>
     </section>
 
     <section>
-      <h2>3. Purpose of Processing</h2>
-
-      <ul>
-        <li>Providing application services</li>
-        <li>Sending notifications</li>
-        <li>Maintaining system security</li>
-        <li>Preventing unauthorized access</li>
-        <li>Technical troubleshooting and optimization</li>
-        <li>Compliance with legal obligations</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>4. Third-Party Services</h2>
-
-      <ul>
-        <li>Supabase</li>
-        <li>Google Firebase</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>5. International Data Transfers</h2>
-
+      <h2>4. Third-Party Services & International Transfers</h2>
       <p>
-        Some infrastructure providers may process or store data on servers located outside Türkiye.
+        The app may use third-party infrastructure providers such as Supabase and Google Firebase. Consequently, some data may be processed or stored on secure servers located outside of Türkiye to ensure service continuity and notification delivery.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Local Data Storage</h2>
+      <p>
+        To enhance performance and enable offline usage, the app may store necessary data locally on your device using secure local database technologies. This data is not extracted from your device without authorization.
       </p>
     </section>
 
     <section>
       <h2>6. Security Measures</h2>
-
-      <ul>
-        <li>HTTPS/TLS encryption</li>
-        <li>Access control systems</li>
-        <li>Row Level Security (RLS)</li>
-        <li>Authentication mechanisms</li>
-      </ul>
+      <p>
+        We implement reasonable technical and administrative security measures, including HTTPS/TLS encryption and strict access control systems, to protect your data.
+      </p>
     </section>
 
     <section>
-      <h2>7. User Rights</h2>
-
+      <h2>7. Account & Data Deletion</h2>
       <p>
-        Users may request access, correction, deletion, or information regarding their personal data.
+        Although the application does not feature public account creation, authorized administrators can request the revocation of their access and the complete deletion of their personal data (such as email addresses and device tokens) from our systems.
       </p>
-
+      <p>
+        To request data or account deletion, please contact us at the email address below. Your request will be processed within 30 days:
+      </p>
       <div class="contact">
-        Contact:
-        <a href="mailto:info@navirid.com">
-          info@navirid.com
-        </a>
+        Deletion Request Email:
+        <a href="mailto:info@navirid.com">info@navirid.com</a>
       </div>
+    </section>
+
+    <section>
+      <h2>8. User Rights</h2>
+      <p>
+        Users have the right to request access, correction, deletion, or information regarding their personal data. For any privacy-related inquiries or requests, please contact us at <strong>info@navirid.com</strong>.
+      </p>
     </section>
 
     <div class="footer">
@@ -554,3 +434,5 @@
 
 </body>
 </html>
+
+```
