@@ -1,18 +1,3 @@
-Gizlilik politikanız genel yapı, şeffaflık ve okunabilirlik açısından oldukça başarılı hazırlanmış. Apple’ın yönergelerine (App Store Review Guidelines) tam uyum sağlamak ve ileride yaşanabilecek gereksiz ret durumlarını önlemek için metin üzerinde bazı stratejik eklemeler ve sadeleştirmeler yapmak faydalı olacaktır.
-
-### Tespit Edilen Eksikler (Apple Standartları İçin Eklenmesi Gerekenler)
-
-1. **Açık "Hesap/Veri Silme" Yönergesi:** Bir önceki konumuzda konuştuğumuz gibi, uygulama içinde hesap oluşturma olmasa da Apple inceleme ekibi (ve kullanıcılar) verilerin veya yönetici hesabının nasıl silineceğini net bir şekilde görmek ister. "Kullanıcı Hakları" bölümü bunu kapsasa da, Apple'ın otomatik taramalarından ve hakemlerinden hızlıca geçmek için "Hesap ve Veri Silme (Account & Data Deletion)" başlıklı bağımsız, çok net bir madde eklenmelidir.
-2. **Kayıt Olma Durumunun Netleştirilmesi:** Uygulamanın sadece önceden yetkilendirilmiş kişiler/yöneticiler için olduğunu, dışarıdan genel kullanıcı kaydına kapalı olduğunu politikada kısaca belirtmek, Apple hakeminin "Neden hesap silme butonu yok?" sorusunu sormadan cevabını almasını sağlar.
-
-### Tespit Edilen Gereksiz Kısımlar (Çıkarılması/Sadeleştirilmesi Gerekenler)
-
-1. **Aşırı Teknik Terimler (SQLite, Drift, RLS vb.):** Gizlilik politikaları teknik bir doküman değil, hukuki bir metindir. Verilerin cihazda yerel olarak tutulduğunu (local-first mimariyi) belirtmek harikadır, ancak *SQLite*, *Drift* veya *Row Level Security (RLS)* gibi spesifik framework/teknoloji isimleri vermek gereksizdir. Yarın veritabanını Isar veya başka bir teknolojiyle değiştirdiğinizde politikayı güncellemek zorunda kalmamalısınız. Bunlar "yerel veritabanı teknolojileri" ve "erişim kısıtlamaları" olarak genelleştirilmelidir.
-2. **GitHub Pages Maddesi:** 14. maddedeki GitHub Pages detayı mobil uygulama gizlilik politikası için fazla spesifik bir web barındırma detayıdır. Mobil uygulamayı inceleyen Apple hakemi için kafa karıştırıcı olabilir, kaldırılması metni daha profesyonel yapar.
-
-Bu tespitler doğrultusunda HTML dosyanızı Apple standartlarına tam uyumlu, gereksiz teknik terimlerden arındırılmış ve hem Türkçe hem İngilizce kısımlarında "Veri Silme" süreçleri netleştirilmiş haliyle aşağıda güncelledim:
-
-```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
