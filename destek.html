@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destek | Kamu-Sen Antalya Avantaj</title>
+  <meta name="description" content="Kamu-Sen Antalya Avantaj mobil uygulaması destek ve iletişim sayfası." />
+  <style>
+    :root {
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --background: #ffffff;
+      --heading: #111827;
+      --link: #2563eb;
+      --max-width: 920px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+    .wrapper { max-width: var(--max-width); margin: 0 auto; padding: 56px 24px 80px; }
+    .topbar { margin-bottom: 48px; }
+    .brand {
+      font-size: 14px; color: var(--muted); letter-spacing: 0.04em;
+      text-transform: uppercase; margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0; font-size: 40px; line-height: 1.2; color: var(--heading);
+      font-weight: 700; letter-spacing: -0.03em;
+    }
+    .updated { margin-top: 18px; color: var(--muted); font-size: 15px; }
+    .intro { margin-top: 40px; margin-bottom: 52px; }
+    section { padding: 30px 0; border-top: 1px solid var(--border); }
+    section:first-of-type { border-top: none; padding-top: 0; }
+    h2 {
+      margin: 0 0 18px; font-size: 24px; line-height: 1.35; color: var(--heading);
+      font-weight: 600; letter-spacing: -0.02em;
+    }
+    h3 { margin: 26px 0 10px; font-size: 18px; color: var(--heading); font-weight: 600; }
+    p { margin: 0 0 16px; }
+    ul { margin: 0 0 16px; padding-left: 22px; }
+    li { margin-bottom: 10px; }
+    a { color: var(--link); }
+    .contact {
+      margin: 8px 0 0; padding: 22px 24px;
+      border: 1px solid var(--border); border-radius: 12px;
+      background: #f9fafb;
+    }
+    .contact dl { margin: 0; display: grid; grid-template-columns: 160px 1fr; gap: 10px 16px; }
+    .contact dt { color: var(--muted); }
+    .contact dd { margin: 0; }
+    @media (max-width: 560px) {
+      h1 { font-size: 30px; }
+      .wrapper { padding: 40px 18px 60px; }
+      .contact dl { grid-template-columns: 1fr; gap: 4px 0; }
+      .contact dt { margin-top: 12px; }
+    }
+    .tabs {
+      display: flex; gap: 8px; margin: 0 0 40px;
+      border-bottom: 1px solid var(--border); padding-bottom: 0;
+    }
+    .tabs button {
+      appearance: none; background: none; border: none; cursor: pointer;
+      font: inherit; font-size: 15px; color: var(--muted);
+      padding: 10px 16px; border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+    }
+    .tabs button[aria-selected="true"] { color: var(--heading); font-weight: 600; border-bottom-color: var(--link); }
+    .tabs button:hover { color: var(--heading); }
+    .tabs button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 4px; }
+    /* Panels are visible by default so the page still reads with JS disabled;
+       the script hides the inactive one on load. */
+    .lang-divider { margin: 70px 0 10px; border-top: 1px solid var(--border); padding-top: 50px; }
+    footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="topbar">
+      <div class="brand">Türkiye Kamu-Sen Antalya</div>
+      <h1><span class="t-tr">Destek</span><span class="t-en">Support</span></h1>
+      <p class="updated">
+        <span class="t-tr">Antalya Avantaj mobil uygulaması</span>
+        <span class="t-en">Antalya Avantaj mobile app</span>
+      </p>
+    </div>
+
+    <!-- Neither panel is hidden in the markup: if the script below never runs,
+         both languages simply stack and the page stays fully readable. The
+         script hides one on load. -->
+    <div class="tabs" role="tablist" aria-label="Dil / Language">
+      <button type="button" role="tab" id="tab-tr" aria-controls="panel-tr" aria-selected="true">Türkçe</button>
+      <button type="button" role="tab" id="tab-en" aria-controls="panel-en" aria-selected="false">English</button>
+    </div>
+
+    <div id="panel-tr" role="tabpanel" aria-labelledby="tab-tr" lang="tr">
+
+    <p class="intro">
+      Antalya Avantaj, Türkiye Kamu-Sen Antalya'nın anlaşmalı olduğu işletmelerdeki
+      indirimleri tek uygulamada toplar. Uygulamayla ilgili soru, sorun veya
+      önerileriniz için aşağıdaki kanallardan bize ulaşabilirsiniz.
+    </p>
+
+    <section>
+      <h2>İletişim</h2>
+      <div class="contact">
+        <dl>
+          <dt>E-posta</dt>
+          <dd><a href="mailto:antalya1@turkburosen.org.tr">antalya1@turkburosen.org.tr</a></dd>
+          <dt>Telefon</dt>
+          <dd>+90 545 479 2462</dd>
+          <dt>Adres</dt>
+          <dd>Yüksekalan Mahallesi Ali Çetinkaya Caddesi 39/8 Kat:2 Daire: 8 Muratpaşa/Antalya</dd>
+        </dl>
+      </div>
+      <p style="margin-top:18px">
+        Uygulama içinden de yazabilirsiniz: sol üstteki menüden
+        <strong>Geri Bildirim</strong> bölümünü kullanın.
+      </p>
+
+      <h3>Teknik destek</h3>
+      <p>
+        İndirim ve üyelik konuları için yukarıdaki sendika iletişim bilgilerini
+        kullanın. Uygulamanın kendisiyle ilgili teknik sorunlar (hata, çökme,
+        güncelleme) için geliştiriciye yazabilirsiniz.
+      </p>
+      <div class="contact">
+        <dl>
+          <dt>Geliştirici</dt>
+          <dd>muhteremoguzhanyildirim@gmail.com</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sık sorulan sorular</h2>
+
+      <h3>İndirimden nasıl yararlanırım?</h3>
+      <p>
+        Anlaşmalı işletmeye giderken Türkiye Kamu-Sen üyelik kartınızı veya kimlik
+        belgenizi gösterin. İndirim oranı ve koşulları her işletmenin kendi detay
+        sayfasında yazılıdır; bazı işletmeler ek doğrulama isteyebilir.
+      </p>
+
+      <h3>"Yakınımdaki" özelliği nasıl çalışıyor?</h3>
+      <p>
+        Konum izni verdiğinizde işletmeler size olan mesafeye göre sıralanır.
+        Konumunuz yalnızca cihazınızda işlenir; sunucularımıza gönderilmez ve
+        saklanmaz. İzni vermek zorunda değilsiniz, uygulamanın geri kalanı izinsiz
+        de tam olarak çalışır.
+      </p>
+
+      <h3>Bazı işletmelerde mesafe yerine "yaklaşık" yazıyor, neden?</h3>
+      <p>
+        O işletmenin tam adresi haritada bulunamadığı için konumu ilçe merkezine
+        göre gösteriliyor. Net bir mesafe yazmak yanıltıcı olacağından, sayı yerine
+        ilçe adı ve "yaklaşık" etiketi kullanılıyor.
+      </p>
+
+      <h3>İnternet olmadan kullanabilir miyim?</h3>
+      <p>
+        Evet. İndirim listesi, duyurular ve telefon rehberi internet bağlantısı
+        olmadan da görüntülenebilir. Bağlantı kurulduğunda içerik otomatik güncellenir.
+      </p>
+
+      <h3>Bir işletmede indirim uygulanmadı, ne yapmalıyım?</h3>
+      <p>
+        Yukarıdaki iletişim bilgilerinden bize bildirin. Durum değerlendirilip ilgili
+        işletmeyle görüşülür.
+      </p>
+
+      <h3>Bildirim almıyorum</h3>
+      <p>
+        Uygulamada <strong>Duyurular</strong> sekmesindeki "Bildirimleri Aç" kartını
+        kullanın. Daha önce izni reddettiyseniz cihazınızın
+        Ayarlar &gt; Bildirimler bölümünden Antalya Avantaj için bildirimlere izin verin.
+      </p>
+
+      <h3>Anlaşmalı işletme olmak istiyorum</h3>
+      <p>
+        İşletmenizi katalogda görmek isterseniz yukarıdaki e-posta adresinden
+        bize yazın.
+      </p>
+    </section>
+
+    <section>
+      <h2>Gizlilik</h2>
+      <p>
+        Hangi verilerin işlendiğini ve nasıl korunduğunu
+        <a href="./index.html">Gizlilik Politikası</a> sayfasında bulabilirsiniz.
+      </p>
+    </section>
+    </div>
+
+    <div id="panel-en" role="tabpanel" aria-labelledby="tab-en" lang="en">
+<p class="intro">
+      Antalya Avantaj collects the discounts offered by businesses that have an
+      agreement with Türkiye Kamu-Sen Antalya into a single app. For questions,
+      problems or suggestions about the app, you can reach us through the
+      channels below.
+    </p>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="contact">
+        <dl>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:antalya1@turkburosen.org.tr">antalya1@turkburosen.org.tr</a></dd>
+          <dt>Phone</dt>
+          <dd>+90 545 479 2462</dd>
+          <dt>Address</dt>
+          <dd>Yüksekalan Mahallesi Ali Çetinkaya Caddesi 39/8 Kat:2 Daire: 8 Muratpaşa/Antalya</dd>
+        </dl>
+      </div>
+      <p style="margin-top:18px">
+        You can also write from inside the app: open the menu at the top left
+        and use the <strong>Geri Bildirim</strong> (Feedback) section.
+      </p>
+
+      <h3>Technical support</h3>
+      <p>
+        For discounts and membership matters, please use the union's contact
+        details above. For technical problems with the app itself — bugs,
+        crashes, update issues — you can write to the developer.
+      </p>
+      <div class="contact">
+        <dl>
+          <dt>Developer</dt>
+          <dd><a href="mailto:info@navirid.com">info@navirid.com</a></dd>
+        </dl>
+      </div>
+    </section>
+
+    <section>
+      <h2>Frequently asked questions</h2>
+
+      <h3>How do I claim a discount?</h3>
+      <p>
+        Show your Türkiye Kamu-Sen membership card or an ID document at the
+        partner business. Each business states its own discount rate and
+        conditions on its detail page; some may ask for additional verification.
+      </p>
+
+      <h3>How does the "Nearby" feature work?</h3>
+      <p>
+        When you grant location access, businesses are sorted by their distance
+        from you. Your location is processed only on your device; it is never
+        sent to or stored on our servers. Granting the permission is optional —
+        the rest of the app works fully without it.
+      </p>
+
+      <h3>Why do some businesses show "yaklaşık" (approximate) instead of a distance?</h3>
+      <p>
+        That business's exact address could not be found on the map, so its
+        position falls back to the centre of its district. Printing a precise
+        distance for it would be misleading, so the district name and an
+        "approximate" label are shown instead of a number.
+      </p>
+
+      <h3>Can I use the app without an internet connection?</h3>
+      <p>
+        Yes. The discount list, announcements and phone directory are all
+        viewable offline, from the very first launch. Content refreshes
+        automatically once a connection is available.
+      </p>
+
+      <h3>A business did not apply the discount. What should I do?</h3>
+      <p>
+        Let us know using the contact details above. The case will be reviewed
+        and taken up with the business concerned.
+      </p>
+
+      <h3>I am not receiving notifications</h3>
+      <p>
+        Use the "Bildirimleri Aç" (Enable notifications) card on the
+        <strong>Duyurular</strong> (Announcements) tab. If you declined the
+        permission earlier, allow notifications for Antalya Avantaj under
+        Settings &gt; Notifications on your device.
+      </p>
+
+      <h3>I would like my business to join the programme</h3>
+      <p>
+        Write to us at the e-mail address above to have your business listed in
+        the catalogue.
+      </p>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <p>
+        You can find what data is processed and how it is protected in the
+        <a href="./index.html">Privacy Policy</a>.
+      </p>
+    </section>
+    </div>
+
+    <footer>
+      Türkiye Kamu-Sen Antalya &middot; Antalya Avantaj
+    </footer>
+  </div>
+
+  <script>
+    // Panels ship visible so the page still reads if this script never runs;
+    // the first thing we do is hide the one we are not showing.
+    (function () {
+      var panels = { tr: document.getElementById('panel-tr'), en: document.getElementById('panel-en') };
+      var tabs   = { tr: document.getElementById('tab-tr'),   en: document.getElementById('tab-en')   };
+
+      function show(lang) {
+        Object.keys(panels).forEach(function (key) {
+          var on = key === lang;
+          panels[key].hidden = !on;
+          tabs[key].setAttribute('aria-selected', String(on));
+        });
+        // The page heading sits above the panels, so it has to be switched
+        // separately — otherwise the English tab is titled "Destek".
+        ['tr', 'en'].forEach(function (key) {
+          Array.prototype.forEach.call(
+            document.querySelectorAll('.t-' + key),
+            function (el) { el.hidden = key !== lang; }
+          );
+        });
+        document.documentElement.lang = lang;
+        try { history.replaceState(null, '', '#' + lang); } catch (e) { /* file:// */ }
+      }
+
+      // Explicit choice in the URL wins, so a link can point at one language.
+      // Otherwise follow the browser, which follows the system — an English
+      // device lands on English without touching anything.
+      var fromHash = (location.hash || '').replace('#', '');
+      var preferred = ['tr', 'en'].indexOf(fromHash) > -1
+        ? fromHash
+        : ((navigator.languages || [navigator.language || 'tr'])
+            .some(function (l) { return String(l).toLowerCase().indexOf('tr') === 0; }) ? 'tr' : 'en');
+
+      show(preferred);
+      Object.keys(tabs).forEach(function (key) {
+        tabs[key].addEventListener('click', function () { show(key); });
+      });
+    })();
+  </script>
+</body>
+</html>
